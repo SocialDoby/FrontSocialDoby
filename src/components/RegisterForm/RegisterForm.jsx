@@ -15,7 +15,7 @@ const RegisterForm = () => {
     const [email, setEmail] = useState('');
     const [firstPassword, setFirstPassword] = useState('');
     const [passwordConfirm, setPasswordConfirm] = useState('');
-    const [role, setRole] = useState('Artista');
+    const [role, setRole] = useState('Gato');
     const [confirmations, setConfirmations] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
     const [loading, setLoading] = useState(false);

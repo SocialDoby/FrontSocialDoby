@@ -16,7 +16,9 @@ const useUsers = () => {
                 setLoading(true);
 
                 const res = await fetch(
-                    `http://localhost:8000/users?${searchParams.toString()}`,
+                    `${import.meta.env.VITE_BACKEND_URL}${
+                        import.meta.env.VITE_BACKEND_PORT
+                    }/users?${searchParams.toString()}`,
                     {
                         headers: token ? { Authorization: token } : {},
                     }

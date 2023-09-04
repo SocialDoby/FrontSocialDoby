@@ -19,7 +19,9 @@ const useSinglePublication = () => {
                 setLoading(true);
 
                 const res = await fetch(
-                    `http://localhost:8000/publications/${id}`,
+                    `${import.meta.env.VITE_BACKEND_URL}${
+                        import.meta.env.VITE_BACKEND_PORT
+                    }/publications/${id}`,
                     {
                         headers: token ? { Authorization: token } : {},
                     }
@@ -96,7 +98,6 @@ const useSinglePublication = () => {
         }
     };
 
-   
     return {
         publication,
         toogleLike,

@@ -18,7 +18,9 @@ const usePublications = () => {
                 setLoading(true);
 
                 const res = await fetch(
-                    `http://localhost:8000/publications?${searchParams.toString()}`,
+                    `${import.meta.env.VITE_BACKEND_URL}${
+                        import.meta.env.VITE_BACKEND_PORT
+                    }/publications?${searchParams.toString()}`,
                     {
                         headers: token ? { Authorization: token } : {},
                     }

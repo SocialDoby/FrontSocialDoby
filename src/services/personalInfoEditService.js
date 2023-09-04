@@ -4,7 +4,7 @@ const personalInfoEditService = async (personalInfo, token) => {
     formData.append('personalInfo', personalInfo);
 
     try {
-        const res = await fetch('http://localhost:8000/users/info', {
+        const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}${import.meta.env.VITE_BACKEND_PORT}/users/info`, {
             method: 'PUT',
             headers: {
                 Authorization: token,

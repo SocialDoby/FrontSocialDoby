@@ -1,7 +1,7 @@
 const editRecoverPassCodeService = async (recoverPassCode, newPass) => {
     try {
         const res = await fetch(
-            `http://localhost:8000/users/password/recover`,
+            `${import.meta.env.VITE_BACKEND_URL}${import.meta.env.VITE_BACKEND_PORT}/users/password/recover`,
             {
                 method: 'put',
                 headers: {

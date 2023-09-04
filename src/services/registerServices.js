@@ -1,5 +1,5 @@
 const registerService = async (username, ownername, email, password, role) => {
-    const res = await fetch('http://localhost:8000/users', {
+    const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}${import.meta.env.VITE_BACKEND_PORT}/users`, {
         method: 'post',
         headers: {
             'Content-Type': 'application/json',
