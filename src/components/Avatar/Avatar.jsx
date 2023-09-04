@@ -5,7 +5,13 @@ const Avatar = ({ avatar, username }) => {
     return (
         <div className='avatar-image'>
             <img
-                src={avatar ? `http://localhost:8000/${avatar}` : defaultAvatar}
+                src={
+                    avatar
+                        ? `${import.meta.env.VITE_BACKEND_URL}${
+                              import.meta.env.VITE_BACKEND_PORT
+                          }/${avatar}`
+                        : defaultAvatar
+                }
                 alt={`${username} avatar`}
             />
         </div>

@@ -4,7 +4,7 @@ const placeEditService = async (place, token) => {
     formData.append('place', place);
 
     try {
-        const res = await fetch('http://localhost:8000/users/place', {
+        const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}${import.meta.env.VITE_BACKEND_PORT}/users/place`, {
             method: 'PUT',
             headers: {
                 Authorization: token,

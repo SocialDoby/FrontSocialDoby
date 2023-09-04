@@ -1,5 +1,5 @@
 const userService = async (token) => {
-    const res = await fetch('http://localhost:8000/users', {
+    const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}${import.meta.env.VITE_BACKEND_PORT}/users`, {
         headers: {
             Authorization: token,
         },

@@ -16,7 +16,7 @@ const PublicationCreateService = async (
     formData.append('place', place);
     formData.append('type', type);
 
-    const res = await fetch('http://localhost:8000/publications', {
+    const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}${import.meta.env.VITE_BACKEND_PORT}/publications`, {
         method: 'post',
         headers: {
             Authorization: token,

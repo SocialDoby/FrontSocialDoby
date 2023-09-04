@@ -1,7 +1,7 @@
 const validateCodeService = async (regCode, setActive) => {
     try {
         const res = await fetch(
-            `http://localhost:8000/users/validate/${regCode}`,
+            `${import.meta.env.VITE_BACKEND_URL}${import.meta.env.VITE_BACKEND_PORT}/users/validate/${regCode}`,
             {
                 method: 'put',
                 headers: {

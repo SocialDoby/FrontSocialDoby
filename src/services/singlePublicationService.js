@@ -1,6 +1,6 @@
 const singlePublicationService = async (publicationId) => {
     const res = await fetch(
-        `http://localhost:8000/publications/${publicationId}`
+        `${import.meta.env.VITE_BACKEND_URL}${import.meta.env.VITE_BACKEND_PORT}/publications/${publicationId}`
     );
     const body = await res.json();
 

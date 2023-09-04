@@ -1,5 +1,5 @@
 const sendRecoverPassService = async (email) => {
-    const res = await fetch('http://localhost:8000/users/password/recover', {
+    const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}${import.meta.env.VITE_BACKEND_PORT}/users/password/recover`, {
         method: 'post',
         headers: {
             'Content-Type': 'application/json',

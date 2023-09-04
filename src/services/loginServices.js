@@ -1,5 +1,5 @@
 const loginService = async (email, password) => {
-    const res = await fetch('http://localhost:8000/users/login', {
+    const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}${import.meta.env.VITE_BACKEND_PORT}/users/login`, {
         method: 'post',
         headers: {
             'Content-Type': 'application/json',

@@ -8,7 +8,9 @@ const PublicationBody = ({ title, photoName, videoName, description }) => {
         <div className={`photo-info ${isDarkMode ? 'dark' : 'light'}`}>
             {photoName && (
                 <img
-                    src={`http://localhost:8000/${photoName}`}
+                    src={`${import.meta.env.VITE_BACKEND_URL}${
+                        import.meta.env.VITE_BACKEND_PORT
+                    }/${photoName}`}
                     alt='Imagen de la publicación'
                 />
             )}
@@ -21,7 +23,9 @@ const PublicationBody = ({ title, photoName, videoName, description }) => {
                     muted
                 >
                     <source
-                        src={`http://localhost:8000/${videoName}`}
+                        src={`${import.meta.env.VITE_BACKEND_URL}${
+                            import.meta.env.VITE_BACKEND_PORT
+                        }/${videoName}`}
                         type='video/mp4'
                     />
                     Tu navegador no admite el video.

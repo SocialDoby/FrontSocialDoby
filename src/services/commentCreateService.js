@@ -4,7 +4,7 @@ const commentCreateService = async (text, id, token) => {
     formData.append('text', text);
 
     const res = await fetch(
-        `http://localhost:8000/publications/${id}/comments`,
+        `${import.meta.env.VITE_BACKEND_URL}${import.meta.env.VITE_BACKEND_PORT}/publications/${id}/comments`,
         {
             method: 'post',
             headers: {

@@ -5,7 +5,7 @@ const validatePassword = async (currentPass, newPass, token) => {
     formData.append('newPass', newPass);
 
     try {
-        const res = await fetch(`http://localhost:8000/users/password`, {
+        const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}${import.meta.env.VITE_BACKEND_PORT}/users/password`, {
             method: 'put',
             headers: {
                 Authorization: token,

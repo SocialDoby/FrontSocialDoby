@@ -2,7 +2,7 @@ const likePublicationService = async (publicationId, likedByMe, token) => {
     const method = likedByMe ? 'delete' : 'post';
 
     const res = await fetch(
-        `http://localhost:8000/publications/${publicationId}/likes`,
+        `${import.meta.env.VITE_BACKEND_URL}${import.meta.env.VITE_BACKEND_PORT}/publications/${publicationId}/likes`,
         {
             method,
             headers: {

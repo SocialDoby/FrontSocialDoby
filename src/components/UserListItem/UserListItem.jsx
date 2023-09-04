@@ -12,7 +12,9 @@ const UserListItem = ({ user }) => {
                 <img
                     src={
                         user.avatar
-                            ? `http://localhost:8000/${user.avatar}`
+                            ? `${import.meta.env.VITE_BACKEND_URL}${
+                                  import.meta.env.VITE_BACKEND_PORT
+                              }/${user.avatar}`
                             : defaultAvatar
                     }
                     alt={`${user.username} avatar`}

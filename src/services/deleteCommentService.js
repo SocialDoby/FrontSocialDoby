@@ -1,6 +1,6 @@
 const deleteCommentService = async (publicationId, commentId, token) => {
     const res = await fetch(
-        `http://localhost:8000/publications/${publicationId}/comments/${commentId}`,
+        `${import.meta.env.VITE_BACKEND_URL}${import.meta.env.VITE_BACKEND_PORT}/publications/${publicationId}/comments/${commentId}`,
         {
             method: 'delete',
             headers: {

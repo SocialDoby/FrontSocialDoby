@@ -14,7 +14,9 @@ const useSingleUser = (userId) => {
                 setLoading(true);
 
                 const res = await fetch(
-                    `http://localhost:8000/users/${userId}`,
+                    `${import.meta.env.VITE_BACKEND_URL}${
+                        import.meta.env.VITE_BACKEND_PORT
+                    }/users/${userId}`,
                     {
                         headers: token ? { Authorization: token } : {},
                     }
